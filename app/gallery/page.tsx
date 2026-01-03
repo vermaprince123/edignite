@@ -76,9 +76,7 @@ export default function GalleryPage() {
 
   // Helper function to check if image exists
   const imageExists = (imagePath: string) => {
-    // In production, you can check if the image file exists
-    // For now, we'll use placeholders
-    return false; // Set to true when you add real images
+    return true;
   };
 
   return (
