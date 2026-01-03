@@ -114,17 +114,17 @@ export function About() {
               </div>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p className="text-base">
-                  {ngoInfo.name} was founded in {ngoInfo.founded} with a powerful mission: <strong className="text-foreground">"Igniting Lives through Education"</strong> and achieving Dr. APJ Abdul Kalam's vision of an <strong className="text-foreground">"Educated India"</strong>. We are a non-profit organization primarily focusing on educating underprivileged children, especially those from slum areas.
+                  Edignite Educational and Charitable Trust was founded in {ngoInfo.founded} with a powerful mission: <strong className="text-foreground">"Igniting Lives through Education"</strong> and achieving Dr. APJ Abdul Kalam's vision of an <strong className="text-foreground">"Educated India"</strong>. We are a non-profit trust primarily focusing on mentoring and educating underprivileged children, especially those from slum areas.
                 </p>
                 <p className="text-base">
-                  Our work extends beyond education—we also fulfill many needs of the poor, ensuring that children have access to not just learning, but also to opportunities that help them grow, dream, and achieve. Through programs in drawing, drama, science, teaching, technical skills, and sports, we provide holistic development.
+                  Our work extends beyond education—we also fulfill many needs of the poor, ensuring that children have access to not just learning, but also to opportunities that help them grow, dream, and achieve. Through programs in drawing, drama, science, teaching, technical skills, and sports, we provide holistic development to students.
                 </p>
                 <p className="text-base">
                   We believe in the power of community. Through our innovative WhatsApp groups, we connect passionate volunteers with children who need support. Whether it's celebrating birthdays, sharing unique skills, or providing mentorship, our volunteers play a crucial role in shaping young minds.
                 </p>
                 <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary mt-8">
                   <p className="font-semibold text-foreground text-lg mb-3">
-                    Dr. APJ Abdul Kalam's Vision
+                    Walking on of of the most powerful quotes of Dr. APJ Abdul Kalam
                   </p>
                   <p className="italic text-foreground text-base leading-relaxed">
                     "{ngoInfo.kalamQuote}"

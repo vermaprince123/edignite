@@ -2,13 +2,13 @@
 
 export const ngoInfo = {
   name: "Edignite",
-  tagline: "HOPE FOR OTHERS - Let's Contribute Our Part to the Society",
+  tagline: "HOPE FOR OTHERS",
   mission:
-    "EDIGNITE - Igniting Lives through Education. Achieving Dr. Kalam Sir's Mission 'EDUCATED INDIA'. We are a non-profit organization mainly focusing to educate underprivileged children. Apart from education, we also fulfill many needs of the poor.",
+    "Ed-Ignite - as the name suggests, 'igniting' a spark of 'education' amongst the underprivileged kids - thus achieving Dr. APJ Adbul Kalam's dream of an educated India",
   vision:
-    "A world where every child, regardless of their background, has access to quality education and opportunities to realize their full potential, creating an educated and empowered India.",
-  email: "connect@edignitengo.org",
-  phone: "+91-9403628175",
+    "A world where every child, regardless of their background, has access to quality education and opportunities to realize their full potential, creating an educated and empowered communities and world.",
+  email: "edignitengo@gmail.com",
+  phone: "+91-7984844099",
   address: "Surat, Gujarat, India",
   founded: "2019",
   website: "http://edignitengo.org",
@@ -23,78 +23,72 @@ export const ngoInfo = {
 export const programs = [
   {
     id: 1,
-    title: "Free Education Program",
+    title: "Mentorship and Education",
     description:
-      "Providing free quality education to underprivileged children from slum areas. Regular teaching sessions and learning activities to inspire and empower young minds.",
-    icon: "📚",
+      "Providing free mentorship and assisting underprivileged kids in their education, making them self-dependent, empowered professionals of future.",
     color: "from-blue-500 to-cyan-500",
-    stats: "1000+ Children",
+    stats: "500+ Children mentored",
   },
   {
     id: 2,
-    title: "Creative Arts & Drawing",
+    title: "Creative Arts",
     description:
-      "Nurturing artistic expression through drawing, painting, and creative workshops. Children explore their creativity and build confidence through various art forms.",
-    icon: "🎨",
+      "Encouraging young artists in the srtudents and making them participate in numerous art, music and dance events.",
     color: "from-pink-500 to-rose-500",
-    stats: "500+ Children",
+    stats: "5+ Competitions round the year",
   },
   {
     id: 3,
-    title: "Drama & Performing Arts",
+    title: "Online Mentorship",
     description:
-      "Building confidence and communication skills through drama, theater, and performing arts. Children learn to express themselves creatively on stage.",
-    icon: "🎭",
-    color: "from-purple-500 to-indigo-500",
-    stats: "300+ Children",
+      "Shaping the future of students by connecting them with industry experts through online mentorship programme",
+    color: "from-orange-500 to-yellow-500",
+    stats: "60+ sessions conducted",
   },
   {
     id: 4,
-    title: "Science & Innovation",
+    title: "Events and Celebrations",
     description:
-      "Fostering curiosity and scientific thinking through hands-on experiments and science workshops. Inspiring the next generation of innovators and problem solvers.",
-    icon: "🔬",
-    color: "from-green-500 to-emerald-500",
-    stats: "400+ Children",
+      "Imparting the values of curiosity, helpfulness, determination, etc. through numerous celebrations, events and festivals",
+    color: "from-teal-500 to-blue-500",
+    stats: "20+ events celebrated round the year",
   },
   {
     id: 5,
-    title: "Technical Skills Training",
+    title: "School Admissions",
     description:
-      "Equipping children with technical skills and digital literacy. From basic computer operations to advanced technical domains, preparing them for the future.",
-    icon: "💻",
-    color: "from-orange-500 to-yellow-500",
-    stats: "600+ Children",
+      "Enrolling underprivileged and unschooled kids to formal education, and thus helping them build a secured future",
+    color: "from-teal-500 to-blue-500",
+    stats: "10+ kids enrolled till now.",
   },
   {
     id: 6,
-    title: "Sports & Physical Activities",
+    title: "Distribution Drives",
     description:
-      "Promoting physical health, teamwork, and discipline through various sports activities. We believe a healthy body leads to a healthy mind and spirit.",
-    icon: "⚽",
+      "Helping kids with their daily needs through distribution drives of various stationery items, clothes, footwear, water bottles, etc",
     color: "from-teal-500 to-blue-500",
-    stats: "400+ Children",
+    stats: "30+ distribution drives conducted till now.",
   },
 ];
 
 export const impactStats = [
   {
     id: 1,
-    number: "1000+",
-    label: "Children Educated",
+    number: "500+",
+    label: "Children Impacted",
     icon: "👶",
     color: "text-pink-500",
   },
   {
     id: 2,
-    number: "1394+",
+    number: "1000+",
     label: "Followers & Supporters",
     icon: "❤️",
     color: "text-red-500",
   },
   {
     id: 3,
-    number: "100+",
+    number: "60+",
     label: "Team Members",
     icon: "👥",
     color: "text-blue-500",
@@ -111,35 +105,19 @@ export const impactStats = [
 export const testimonials = [
   {
     id: 1,
-    name: "Aman",
-    role: "Volunteer Coordinator",
+    name: "Vishal Pandya",
+    role: "Advocate",
     content:
-      "Edignite NGO works for the education and upliftment of poor children by offering free education. Our mission is to ensure that every child, regardless of background, gets quality education.",
+      "The volunteers and trustees at Edignite are students who are balancing their Education and Education of underprivileged kids. They source the deprived kids, make them realise the value of Education, and educate them. Apart from education, the organization also focuses on activities which lead to overall development of kids. Having witnessed the activities of Edignite volunteers, I really appreciate the efforts they put in the education of kids. I am heartly touched by their service and like the way they fulfill their duty to the society.",
     avatar: "👨",
   },
   {
     id: 2,
-    name: "Roopram",
-    role: "Volunteer Coordinator",
+    name: "Falguni Modi",
+    role: "Social Worker",
     content:
-      "We conduct regular teaching sessions and learning activities to inspire and empower children. Volunteers play a key role in shaping these young minds and supporting their growth.",
+      "I am a Social Worker, and have taught several underprivileged kids at slums for years. Thus, I feel very happy to see Edignite Volunteers teach the little kids. The thing I like about Edignite volunteers is that they are students who are hustling in their lives too. Still the take out some hours from their valuable time and teach these kids. As it is rightly said, charity of knowledge is the greatest charity, I salute the Edignite team for their charity of knowledge.",
     avatar: "👨",
-  },
-  {
-    id: 3,
-    name: "SVNIT Partnership",
-    role: "Educational Partner",
-    content:
-      "Our partnership with SVNIT has opened doors for children to witness innovation, discipline, and leadership. These experiences build dreams and shape brighter futures!",
-    avatar: "🏛️",
-  },
-  {
-    id: 4,
-    name: "Community Member",
-    role: "Supporter",
-    content:
-      "Edignite reaches out to children from slum areas who are still deprived of many basic opportunities. Their WhatsApp groups connect volunteers with children who need support the most.",
-    avatar: "🤝",
   },
 ];
 

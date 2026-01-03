@@ -24,8 +24,8 @@ export default function Home() {
         <Impact />
         <Testimonials />
         <Gallery />
-        <Events />
-        <Blog />
+        {/* <Events />  */} {/* TODO: Uncomment after dynamic implementation of events section */}
+        {/* <Blog /> */}  {/* TODO: Uncomment after update of blogs section */}
         <Volunteer />
         <Contact />
       </main>

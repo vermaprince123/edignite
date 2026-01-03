@@ -1,17 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Palette, Theater, FlaskConical, Laptop, Activity } from "lucide-react";
+import { BookOpen, Palette, PartyPopper, Backpack, Laptop, HeartHandshake } from "lucide-react";
 import { programs } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const programIcons: Record<number, any> = {
   1: BookOpen,
   2: Palette,
-  3: Theater,
-  4: FlaskConical,
-  5: Laptop,
-  6: Activity,
+  3: Laptop,
+  4: PartyPopper,
+  5: Backpack,
+  6: HeartHandshake,
 };
 
 export function Programs() {

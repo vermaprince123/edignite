@@ -40,7 +40,7 @@ export function Hero() {
             className="inline-block"
           >
             <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20">
-              Educational and Charitable Trust
+              Edignite Educational and Charitable Trust
             </span>
           </motion.div>
 
@@ -51,9 +51,7 @@ export function Hero() {
             transition={{ delay: 0.3, duration: 0.6 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight"
           >
-            <span className="text-foreground">{ngoInfo.name}</span>
-            <br />
-            <span className="text-primary">Igniting Lives</span>
+            <span className="text-primary">Empowering Lives</span>
             <br />
             <span className="text-foreground">through Education</span>
           </motion.h1>
@@ -75,7 +73,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="text-base md:text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed"
           >
-            {ngoInfo.mission}
+            A non-profit initiative dedicated to empowering the lives of underprivileged children through education.
           </motion.p>
 
           {/* Key Points */}
@@ -87,11 +85,11 @@ export function Hero() {
           >
             <div className="flex items-center gap-2 text-muted-foreground">
               <BookOpen className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">Free Education</span>
+              <span className="text-sm font-medium">Education & Mentorship</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <Users className="h-5 w-5 text-primary" />
-              <span className="text-sm font-medium">1000+ Children</span>
+              <span className="text-sm font-medium">500+ Children</span>
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="text-sm font-medium">Since {ngoInfo.founded}</span>
