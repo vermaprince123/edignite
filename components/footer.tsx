@@ -21,16 +21,16 @@ export function Footer() {
 
   const footerLinks = {
     "Quick Links": [
-      { name: "About Us", href: "#about" },
-      { name: "Our Programs", href: "#programs" },
-      { name: "Get Involved", href: "#volunteer" },
-      { name: "Contact Us", href: "#contact" },
+      { name: "About Us", href: "/about" },
+      { name: "Our Programs", href: "/programs" },
+      { name: "Get Involved", href: "/volunteer" },
+      { name: "Contact Us", href: "/contact" },
     ],
     "Resources": [
-      { name: "Blog", href: "#blog" },
-      { name: "Events", href: "#events" },
-      { name: "Gallery", href: "#gallery" },
-      { name: "Contact", href: "#contact" },
+      { name: "Blog", href: "/blog" },
+      { name: "Events", href: "/events" },
+      { name: "Gallery", href: "/gallery" },
+      { name: "Contact", href: "/contact" },
     ],
   };
 

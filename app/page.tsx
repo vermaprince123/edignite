@@ -3,6 +3,7 @@
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/sections/hero";
+import { HeroBanner } from "@/components/sections/hero-banner";
 import { About } from "@/components/sections/about";
 import { Programs } from "@/components/sections/programs";
 import { Impact } from "@/components/sections/impact";
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+        <HeroBanner />
         <About />
         <Programs />
         <Impact />

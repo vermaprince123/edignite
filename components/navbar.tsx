@@ -9,14 +9,14 @@ import { motion } from "framer-motion";
 import { ngoInfo } from "@/lib/data";
 
 const navItems = [
-  { name: "Home", href: "#home" },
-  { name: "About", href: "#about" },
-  { name: "Programs", href: "#programs" },
-  { name: "Impact", href: "#impact" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Events", href: "#events" },
-  { name: "Blog", href: "#blog" },
-  { name: "Contact", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Programs", href: "/programs" },
+  { name: "Impact", href: "/impact" },
+  { name: "Gallery", href: "/gallery" },
+  // { name: "Events", href: "/events" },
+  // { name: "Blog", href: "/blog" },
+  { name: "Contact", href: "/contact" },
 ];
 
 export function Navbar() {
@@ -46,7 +46,7 @@ export function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link
-            href="#home"
+            href="/"
             className="flex items-center space-x-3 text-xl font-bold"
           >
             <div className="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">

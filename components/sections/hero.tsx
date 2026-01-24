@@ -1,18 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowDown, Users, BookOpen } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ngoInfo } from "@/lib/data";
 
 export function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId.replace("#", ""));
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <section
       id="home"
@@ -105,18 +99,22 @@ export function Hero() {
           >
             <Button
               size="lg"
-              onClick={() => scrollToSection("#volunteer")}
+              asChild
               className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all px-8"
             >
-              Become a Volunteer
+              <Link href="/volunteer">
+                Become a Volunteer
+              </Link>
             </Button>
             <Button
               variant="outline"
               size="lg"
-              onClick={() => scrollToSection("#contact")}
+              asChild
               className="border-2 hover:bg-primary hover:text-primary-foreground px-8"
             >
-              Get In Touch
+              <Link href="/contact">
+                Get In Touch
+              </Link>
             </Button>
           </motion.div>
 
@@ -127,15 +125,16 @@ export function Hero() {
             transition={{ delay: 0.9, duration: 0.6 }}
             className="pt-16"
           >
-            <motion.button
-              onClick={() => scrollToSection("#about")}
+            <motion.div
               className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               animate={{ y: [0, 8, 0] }}
               transition={{ repeat: Infinity, duration: 2 }}
             >
-              <span className="text-sm font-medium">Learn More</span>
-              <ArrowDown className="h-5 w-5" />
-            </motion.button>
+              <Link href="/about" className="flex flex-col items-center gap-2">
+                <span className="text-sm font-medium">Learn More</span>
+                <ArrowDown className="h-5 w-5" />
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>

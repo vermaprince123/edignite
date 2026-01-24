@@ -40,13 +40,16 @@ export function Gallery() {
 
   const getCategoryGradient = (category: string) => {
     const gradients: Record<string, string> = {
-      education: "from-blue-500/20 to-cyan-500/20",
-      arts: "from-purple-500/20 to-pink-500/20",
-      events: "from-orange-500/20 to-yellow-500/20",
-      sports: "from-green-500/20 to-emerald-500/20",
-      community: "from-indigo-500/20 to-blue-500/20",
+      education: "from-primary/20 to-primary/10",
+      arts: "from-primary/25 to-primary/15",
+      events: "from-primary/20 to-primary/10",
+      sports: "from-primary/25 to-primary/15",
+      community: "from-primary/20 to-primary/10",
+      achievements: "from-primary/25 to-primary/15",
+      distribution: "from-primary/20 to-primary/10",
+      meetups: "from-primary/25 to-primary/15",
     };
-    return gradients[category] || "from-gray-500/20 to-gray-600/20";
+    return gradients[category] || "from-primary/20 to-primary/10";
   };
 
   return (
