@@ -58,6 +58,9 @@ export const metadata: Metadata = {
     userScalable: false,
     viewportFit: "cover",
   },
+  other: {
+    "google-adsense-account": "ca-pub-6239232728067791",
+  },
 };
 
 export default function RootLayout({
