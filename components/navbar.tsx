@@ -15,6 +15,7 @@ const navItems = [
   { name: "Programs", href: "/programs" },
   { name: "Impact", href: "/impact" },
   { name: "Gallery", href: "/gallery" },
+  { name: "Members", href: "/members" },
   // { name: "Events", href: "/events" },
   // { name: "Blog", href: "/blog" },
   { name: "Contact", href: "/contact" },

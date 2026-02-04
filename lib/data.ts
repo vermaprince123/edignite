@@ -466,3 +466,46 @@ export const blogPosts = [
     category: "Partnerships",
   },
 ];
+
+export const members = [
+  {
+    id: 1,
+    name: "Sachin",
+    role: "Volunteer Coordinator",
+    description: "Engaging and managing volunteers",
+    image: "/gallery/sachin.jpg",
+    email: "",
+    linkedin: "",
+    instagram: "",
+  },
+  {
+    id: 2,
+    name: "Aman",
+    role: "Volunteer Coordinator",
+    description: "Engaging and managing volunteers",
+    image: "/gallery/aman.jpg",
+    email: "",
+    linkedin: "",
+    instagram: "",
+  },
+  {
+    id: 3,
+    name: "Bhavya",
+    role: "Volunteer Coordinator",
+    description: "Engaging and managing volunteers",
+    image: "/gallery/bhavya.jpg",
+    email: "",
+    linkedin: "",
+    instagram: "",
+  },
+  {
+    id: 4,
+    name: "Harsh",
+    role: "Volunteer Coordinator",
+    description: "Engaging and managing volunteers",
+    image: "/gallery/harsh.jpg",
+    email: "",
+    linkedin: "",
+    instagram: "",
+  },
+];
