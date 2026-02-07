@@ -476,9 +476,9 @@ export const members = [
     image: "/gallery/aman.jpg",
     email: "",
     linkedin: "https://www.linkedin.com/in/aman-vataliya/",
-    instagram: "",
+    instagram: "amanvataliya@gmail.com",
   },
-   {
+  {
     id: 4,
     name: "Harsh",
     role: "National Physics Laboratory (AIR 82 - CSIR NET)",
@@ -498,7 +498,7 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/sachin-kumar-09b008223/",
     instagram: "",
   },
-    {
+  {
     id: 3,
     name: "Bhavya",
     role: "Masters of Science from NIT Surat",
