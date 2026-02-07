@@ -471,8 +471,8 @@ export const members = [
   {
     id: 2,
     name: "Aman",
-    role: "Chemical Engineer (B.Tech.), NIT Surat",
-    description: "Engaging and managing volunteers",
+    role: "Volunteer Coordinator",
+    description: "Chemical Engineer (B.Tech.), NIT Surat",
     image: "/gallery/aman.jpg",
     email: "",
     linkedin: "https://www.linkedin.com/in/aman-vataliya/",
@@ -481,8 +481,8 @@ export const members = [
   {
     id: 4,
     name: "Harsh",
-    role: "National Physics Laboratory (AIR 82 - CSIR NET)",
-    description: "Engaging and managing volunteers",
+    role: "Volunteer Coordinator",
+    description: "National Physics Laboratory (AIR 82 - CSIR NET)",
     image: "/gallery/harsh.jpg",
     email: "harshmalaviya1212@gmail.com",
     linkedin: "https://www.linkedin.com/in/harsh-m-1660461b9/",
@@ -491,8 +491,8 @@ export const members = [
   {
     id: 1,
     name: "Sachin",
-    role: "Masters of Science from NIT Surat",
-    description: "Engaging and managing volunteers",
+    role: "Volunteer Coordinator",
+    description: "Masters of Physics from NIT Surat",
     image: "/gallery/sachin.jpg",
     email: "sachinkumarogs@gmail.com",
     linkedin: "https://www.linkedin.com/in/sachin-kumar-09b008223/",
@@ -501,8 +501,8 @@ export const members = [
   {
     id: 3,
     name: "Bhavya",
-    role: "Masters of Science from NIT Surat",
-    description: "Engaging and managing volunteers",
+    role: "Volunteer Coordinator",
+    description: "Masters of Physics from NIT Surat",
     image: "/gallery/bhavya.jpg",
     email: "bhavyapittaliya854@gmail.com",
     linkedin: "https://www.linkedin.com/in/bhavya-pittaliya-03b20a224/",
