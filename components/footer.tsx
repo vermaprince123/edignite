@@ -29,8 +29,8 @@ export function Footer() {
       { nameKey: "contact", href: "/contact" },
     ],
     resources: [
-      { nameKey: "blog", href: "/blog" },
-      { nameKey: "events", href: "/events" },
+      // { nameKey: "blog", href: "/blog" },
+      // { nameKey: "events", href: "/events" },
       { nameKey: "gallery", href: "/gallery" },
       { nameKey: "contact", href: "/contact" },
     ],
@@ -87,7 +87,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {link.nameKey === "getInvolved" ? t(`footer.${link.nameKey}`) : t(`nav.${link.nameKey}`)}
+                    {link.nameKey === "getInvolved" ? t(`${link.nameKey}`) : t(`nav.${link.nameKey}`)}
                   </Link>
                 </li>
               ))}
@@ -104,7 +104,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t(`footer.${link.nameKey}`)}
+                    {link.nameKey === "contact" ? t(`${link.nameKey}`) : t(`nav.${link.nameKey}`)}
                   </Link>
                 </li>
               ))}
