@@ -159,6 +159,11 @@ export const translations = {
       rights: "© 2026 Edignite - Educational and Charitable Trust. All rights reserved.",
       registered: "Registered NGO | Surat, Gujarat | Founded 2019",
     },
+    // Members
+    members: {
+      title: "Our Team",
+      subtitle: "Meet the dedicated members of Edignite who are tirelessly working to transform children's lives through education and empowerment.",
+    },
     // Common
     common: {
       readMore: "Read More",
