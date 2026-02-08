@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Mail, Phone, MapPin, Facebook, Instagram, Globe, Linkedin } from "lucide-react";
 import { ngoInfo } from "@/lib/data";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/language-context";
 
 export function Footer() {
+  const { t } = useLanguage();
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
@@ -20,17 +22,17 @@ export function Footer() {
   }
 
   const footerLinks = {
-    "Quick Links": [
-      { name: "About Us", href: "/about" },
-      { name: "Our Programs", href: "/programs" },
-      { name: "Get Involved", href: "/volunteer" },
-      { name: "Contact Us", href: "/contact" },
+    quickLinks: [
+      { nameKey: "about", href: "/about" },
+      { nameKey: "programs", href: "/programs" },
+      { nameKey: "getInvolved", href: "/volunteer" },
+      { nameKey: "contact", href: "/contact" },
     ],
-    "Resources": [
-      { name: "Blog", href: "/blog" },
-      { name: "Events", href: "/events" },
-      { name: "Gallery", href: "/gallery" },
-      { name: "Contact", href: "/contact" },
+    resources: [
+      { nameKey: "blog", href: "/blog" },
+      { nameKey: "events", href: "/events" },
+      { nameKey: "gallery", href: "/gallery" },
+      { nameKey: "contact", href: "/contact" },
     ],
   };
 
@@ -49,7 +51,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              {ngoInfo.mission}
+              {t("footer.description")}
             </p>
             <div className="flex items-center space-x-4">
               {socialLinks.map((social, index) => {
@@ -77,15 +79,15 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-semibold mb-4">Quick Links</h3>
+            <h3 className="font-semibold mb-4">{t("footer.quickLinks")}</h3>
             <ul className="space-y-2">
-              {footerLinks["Quick Links"].map((link) => (
-                <li key={link.name}>
+              {footerLinks.quickLinks.map((link) => (
+                <li key={link.nameKey}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {link.name}
+                    {link.nameKey === "getInvolved" ? t(`footer.${link.nameKey}`) : t(`nav.${link.nameKey}`)}
                   </Link>
                 </li>
               ))}
@@ -94,15 +96,15 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold mb-4">Resources</h3>
+            <h3 className="font-semibold mb-4">{t("footer.resources")}</h3>
             <ul className="space-y-2">
-              {footerLinks["Resources"].map((link) => (
-                <li key={link.name}>
+              {footerLinks.resources.map((link) => (
+                <li key={link.nameKey}>
                   <Link
                     href={link.href}
                     className="text-sm text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {link.name}
+                    {t(`footer.${link.nameKey}`)}
                   </Link>
                 </li>
               ))}
@@ -111,7 +113,7 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-semibold mb-4">Contact Us</h3>
+            <h3 className="font-semibold mb-4">{t("footer.contactUs")}</h3>
             <ul className="space-y-3">
               <li className="flex items-start gap-2 text-sm text-muted-foreground">
                 <Mail className="h-4 w-4 mt-0.5 text-primary" />
@@ -135,10 +137,10 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground text-center md:text-left">
-            © {currentYear} {ngoInfo.name} - Educational and Charitable Trust. All rights reserved.
+            {t("footer.rights")}
           </p>
           <p className="text-xs text-muted-foreground">
-            Registered NGO | Surat, Gujarat | Founded {ngoInfo.founded}
+            {t("footer.registered")}
           </p>
         </div>
       </div>

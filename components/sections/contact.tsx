@@ -10,6 +10,7 @@ import { Mail, Phone, MapPin, Send, MessageSquare, User, Clock, CheckCircle, XCi
 import { ngoInfo } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/language-context";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -28,6 +29,7 @@ const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YO
 const HCAPTCHA_SITE_KEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
 export function Contact() {
+  const { t } = useLanguage();
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [submitMessage, setSubmitMessage] = useState("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -120,11 +122,11 @@ export function Contact() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Get In <span className="text-primary">Touch</span>
+            {t("contact.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Have questions or want to learn more? We'd love to hear from you!
+            {t("contact.subtitle")}
           </p>
         </motion.div>
 
@@ -138,7 +140,7 @@ export function Contact() {
           >
             <Card className="border">
               <CardHeader>
-                <CardTitle>Contact Information</CardTitle>
+                <CardTitle>{t("contact.contactInfo")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-5">
                 <div className="flex items-start gap-4">
@@ -146,7 +148,7 @@ export function Contact() {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Email</p>
+                    <p className="font-semibold text-foreground mb-1">{t("contact.email")}</p>
                     <a
                       href={`mailto:${ngoInfo.email}`}
                       className="text-muted-foreground hover:text-primary transition-colors text-sm"
@@ -160,7 +162,7 @@ export function Contact() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Phone</p>
+                    <p className="font-semibold text-foreground mb-1">{t("contact.phone")}</p>
                     <a
                       href={`tel:${ngoInfo.phone}`}
                       className="text-muted-foreground hover:text-primary transition-colors text-sm"
@@ -186,11 +188,11 @@ export function Contact() {
                 <div className="flex items-start gap-4">
                   <Clock className="h-5 w-5 text-primary mt-0.5" />
                   <div>
-                    <h3 className="font-semibold mb-3">Office Hours</h3>
+                    <h3 className="font-semibold mb-3">{t("contact.officeHours")}</h3>
                     <div className="text-sm text-muted-foreground space-y-1">
-                      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                      <p>Saturday: 10:00 AM - 4:00 PM</p>
-                      <p>Sunday: Closed</p>
+                      <p>{t("contact.mondayFriday")}</p>
+                      <p>{t("contact.saturday")}</p>
+                      <p>{t("contact.sunday")}</p>
                     </div>
                   </div>
                 </div>
@@ -206,14 +208,14 @@ export function Contact() {
           >
             <Card className="border">
               <CardHeader>
-                <CardTitle>Send us a Message</CardTitle>
+                <CardTitle>{t("contact.sendMessage")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium flex items-center gap-2">
                       <User className="h-4 w-4" />
-                      Name
+                      {t("contact.name")}
                     </label>
                     <input
                       id="name"
@@ -229,7 +231,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium flex items-center gap-2">
                       <Mail className="h-4 w-4" />
-                      Email
+                      {t("contact.email")}
                     </label>
                     <input
                       id="email"
@@ -244,7 +246,7 @@ export function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="subject" className="text-sm font-medium">Subject</label>
+                    <label htmlFor="subject" className="text-sm font-medium">{t("contact.subject")}</label>
                     <input
                       id="subject"
                       {...register("subject")}
@@ -259,7 +261,7 @@ export function Contact() {
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium flex items-center gap-2">
                       <MessageSquare className="h-4 w-4" />
-                      Message
+                      {t("contact.message")}
                     </label>
                     <textarea
                       id="message"
@@ -314,7 +316,7 @@ export function Contact() {
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
-                        Send Message
+                        {t("contact.send")}
                       </>
                     )}
                   </Button>

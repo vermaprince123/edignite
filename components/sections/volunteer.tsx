@@ -10,6 +10,7 @@ import { User, Mail, Phone, MessageSquare, Send, Users, Lightbulb, Heart, Calend
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ngoInfo } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
 
 const volunteerSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -27,6 +28,7 @@ const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || "YO
 const HCAPTCHA_SITE_KEY = "50b2fe65-b00b-4b9e-ad62-3ba471098be2";
 
 export function Volunteer() {
+  const { t } = useLanguage();
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [submitMessage, setSubmitMessage] = useState("");
   const [captchaToken, setCaptchaToken] = useState<string | null>(null);
@@ -112,23 +114,23 @@ export function Volunteer() {
   const benefits = [
     {
       icon: Heart,
-      title: "Make a Real Impact",
-      description: "Directly contribute to children's growth and development",
+      titleKey: "makeImpact",
+      descriptionKey: "makeImpactText",
     },
     {
       icon: Lightbulb,
-      title: "Learn & Grow",
-      description: "Gain valuable experience and develop new skills",
+      titleKey: "learnGrow",
+      descriptionKey: "learnGrowText",
     },
     {
       icon: Users,
-      title: "Build Community",
-      description: "Connect with like-minded individuals and build lasting friendships",
+      titleKey: "buildCommunity",
+      descriptionKey: "buildCommunityText",
     },
     {
       icon: Calendar,
-      title: "Flexible Commitment",
-      description: "Choose how and when you want to contribute",
+      titleKey: "flexibleCommitment",
+      descriptionKey: "flexibleCommitmentText",
     },
   ];
 
@@ -143,11 +145,11 @@ export function Volunteer() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Become a <span className="text-primary">Volunteer</span>
+            {t("volunteer.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Join our team of passionate volunteers and make a meaningful difference in children's lives.
+            {t("volunteer.subtitle")}
           </p>
         </motion.div>
 
@@ -161,7 +163,7 @@ export function Volunteer() {
           >
             <Card className="border h-full">
               <CardHeader>
-                <CardTitle className="text-2xl">Why Volunteer?</CardTitle>
+                <CardTitle className="text-2xl">{t("volunteer.whyVolunteer")}</CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
                 {benefits.map((benefit, index) => {
@@ -172,9 +174,9 @@ export function Volunteer() {
                         <Icon className="h-6 w-6 text-primary" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-foreground mb-1">{benefit.title}</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t(`volunteer.${benefit.titleKey}`)}</h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          {benefit.description}
+                          {t(`volunteer.${benefit.descriptionKey}`)}
                         </p>
                       </div>
                     </div>
@@ -192,14 +194,14 @@ export function Volunteer() {
           >
             <Card className="border">
               <CardHeader>
-                <CardTitle>Join Us Today</CardTitle>
+                <CardTitle>{t("volunteer.joinUs")}</CardTitle>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                   <div className="space-y-2">
                     <label htmlFor="name" className="text-sm font-medium flex items-center gap-2">
                       <User className="h-4 w-4" />
-                      Name
+                      {t("volunteer.name")}
                     </label>
                     <input
                       id="name"
@@ -215,7 +217,7 @@ export function Volunteer() {
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium flex items-center gap-2">
                       <Mail className="h-4 w-4" />
-                      Email
+                      {t("volunteer.email")}
                     </label>
                     <input
                       id="email"
@@ -232,7 +234,7 @@ export function Volunteer() {
                   <div className="space-y-2">
                     <label htmlFor="phone" className="text-sm font-medium flex items-center gap-2">
                       <Phone className="h-4 w-4" />
-                      Phone
+                      {t("volunteer.phone")}
                     </label>
                     <input
                       id="phone"
@@ -249,7 +251,7 @@ export function Volunteer() {
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium flex items-center gap-2">
                       <MessageSquare className="h-4 w-4" />
-                      Why do you want to volunteer?
+                      {t("volunteer.whyVolunteerQuestion")}
                     </label>
                     <textarea
                       id="message"
@@ -304,19 +306,19 @@ export function Volunteer() {
                     ) : (
                       <>
                         <Send className="mr-2 h-4 w-4" />
-                        Submit Application
+                        {t("volunteer.submit")}
                       </>
                     )}
                   </Button>
                   <p className="text-xs text-center text-muted-foreground">
-                    Or join our WhatsApp group:{" "}
+                    {t("volunteer.orJoin")}{" "}
                     <a
-                      href="https://bit.ly/Edignite_Joining_Form"
+                      href={ngoInfo.volunteerForm}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline font-semibold"
                     >
-                      Click here to join
+                      {t("volunteer.clickHere")}
                     </a>
                   </p>
                 </form>

@@ -4,25 +4,27 @@ import { motion } from "framer-motion";
 import { Heart, CreditCard, Banknote, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
 
 export function Donate() {
+  const { t } = useLanguage();
   const donationMethods = [
     {
       icon: CreditCard,
-      title: "Online Donation",
-      description: "Quick and secure online payment",
+      titleKey: "online",
+      descriptionKey: "onlineDesc",
       color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Smartphone,
-      title: "UPI Payment",
-      description: "Scan QR code or use UPI ID",
+      titleKey: "upi",
+      descriptionKey: "upiDesc",
       color: "from-green-500 to-emerald-500",
     },
     {
       icon: Banknote,
-      title: "Bank Transfer",
-      description: "Direct bank transfer details",
+      titleKey: "bank",
+      descriptionKey: "bankDesc",
       color: "from-purple-500 to-indigo-500",
     },
   ];
@@ -47,11 +49,11 @@ export function Donate() {
             <Heart className="h-16 w-16 text-pink-500 animate-pulse" />
           </div>
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
-            Make a <span className="bg-gradient-to-r from-pink-500 to-rose-500 bg-clip-text text-transparent">Difference</span>
+            {t("donate.title")}
           </h2>
           <div className="w-32 h-1.5 bg-gradient-to-r from-pink-500 via-rose-500 to-red-500 mx-auto rounded-full" />
           <p className="text-muted-foreground mt-6 text-lg max-w-3xl mx-auto">
-            Your contribution helps us empower more children and create lasting impact in their lives.
+            {t("donate.subtitle")}
           </p>
         </motion.div>
 
@@ -60,7 +62,7 @@ export function Donate() {
             const Icon = method.icon;
             return (
               <motion.div
-                key={method.title}
+                key={method.titleKey}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -71,12 +73,12 @@ export function Donate() {
                     <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${method.color} flex items-center justify-center mx-auto mb-4`}>
                       <Icon className="h-8 w-8 text-white" />
                     </div>
-                    <CardTitle>{method.title}</CardTitle>
+                    <CardTitle>{t(`donate.${method.titleKey}`)}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground text-sm mb-4">{method.description}</p>
+                    <p className="text-muted-foreground text-sm mb-4">{t(`donate.${method.descriptionKey}`)}</p>
                     <Button className="w-full bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600">
-                      Donate Now
+                      {t("donate.button")}
                     </Button>
                   </CardContent>
                 </Card>
@@ -94,21 +96,19 @@ export function Donate() {
         >
           <Card className="border-2 bg-gradient-to-br from-primary/10 to-primary/5">
             <CardContent className="p-8 md:p-12 text-center">
-              <h3 className="text-2xl font-bold mb-4">Every Contribution Matters</h3>
+              <h3 className="text-2xl font-bold mb-4">{t("donate.matters")}</h3>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Your donation directly supports our programs, helping us reach more children, 
-                provide better resources, and create lasting positive change. 
-                Together, we can ignite more dreams and empower more futures.
+                {t("donate.mattersText")}
               </p>
               <div className="flex flex-wrap justify-center gap-4 text-sm">
                 <div className="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold">
-                  💰 100% Transparent
+                  💰 {t("donate.transparent")}
                 </div>
                 <div className="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold">
-                  📋 Tax Deductible
+                  📋 {t("donate.taxDeductible")}
                 </div>
                 <div className="px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold">
-                  🔒 Secure Payment
+                  🔒 {t("donate.secure")}
                 </div>
               </div>
             </CardContent>

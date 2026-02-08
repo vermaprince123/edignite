@@ -5,6 +5,7 @@ import { useRef, useEffect, useState } from "react";
 import { Users, Heart, Building2, Calendar } from "lucide-react";
 import { impactStats } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
 
 function AnimatedCounter({ value, duration = 2 }: { value: string; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -48,6 +49,7 @@ const statIcons: Record<number, any> = {
 };
 
 export function Impact() {
+  const { t } = useLanguage();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -83,11 +85,11 @@ export function Impact() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-primary">Impact</span>
+            {t("impact.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Together, we're making a real difference in children's lives. Here's what we've achieved so far.
+            {t("impact.subtitle")}
           </p>
         </motion.div>
 
@@ -110,7 +112,12 @@ export function Impact() {
                     <div className="text-4xl md:text-5xl font-bold mb-3 text-primary">
                       {isInView ? <AnimatedCounter value={stat.number} /> : "0"}
                     </div>
-                    <p className="text-muted-foreground font-medium">{stat.label}</p>
+                    <p className="text-muted-foreground font-medium">
+                      {stat.id === 1 ? t("impact.childrenImpacted") :
+                       stat.id === 2 ? t("impact.followers") :
+                       stat.id === 3 ? t("impact.teamMembers") :
+                       t("impact.yearsOfService")}
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -128,12 +135,9 @@ export function Impact() {
         >
           <Card className="border bg-muted/30">
             <CardContent className="p-10 md:p-14 text-center">
-              <h3 className="text-3xl font-bold mb-6">Making a Difference, One Child at a Time</h3>
+              <h3 className="text-3xl font-bold mb-6">{t("impact.makingDifference")}</h3>
               <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Every number represents a life touched, a dream ignited, and a future empowered. 
-                From creative arts to digital literacy, from educational support to life skills training, 
-                we're building a generation of confident, skilled, and compassionate individuals. 
-                Join us in this journey of transformation.
+                {t("impact.makingDifferenceText")}
               </p>
             </CardContent>
           </Card>

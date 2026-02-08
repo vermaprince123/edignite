@@ -3,7 +3,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "@/lib/theme-provider";
+import { LanguageProvider } from "@/lib/language-context";
 import { ScrollToTop } from "@/components/scroll-to-top";
+import { HtmlLang } from "@/components/html-lang";
 import { ngoInfo } from "@/lib/data";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -79,10 +81,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
-          <ScrollToTop />
-          <Analytics />
-          <SpeedInsights />
+          <LanguageProvider>
+            <HtmlLang />
+            {children}
+            <ScrollToTop />
+            <Analytics />
+            <SpeedInsights />
+          </LanguageProvider>
         </ThemeProvider>
         <Script
           async

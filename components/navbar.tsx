@@ -8,20 +8,23 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ngoInfo } from "@/lib/data";
+import { useLanguage } from "@/lib/language-context";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Programs", href: "/programs" },
-  { name: "Impact", href: "/impact" },
-  { name: "Gallery", href: "/gallery" },
-  { name: "Members", href: "/members" },
-  // { name: "Events", href: "/events" },
-  // { name: "Blog", href: "/blog" },
-  { name: "Contact", href: "/contact" },
+  { key: "home", href: "/" },
+  { key: "about", href: "/about" },
+  { key: "programs", href: "/programs" },
+  { key: "impact", href: "/impact" },
+  { key: "gallery", href: "/gallery" },
+  { key: "members", href: "/members" },
+  // { key: "events", href: "/events" },
+  // { key: "blog", href: "/blog" },
+  { key: "contact", href: "/contact" },
 ];
 
 export function Navbar() {
+  const { t } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [scrolled, setScrolled] = React.useState(false);
 
@@ -67,21 +70,23 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-4">
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.key}
                 href={item.href}
                 className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors relative group"
               >
-                {item.name}
+                {t(`nav.${item.key}`)}
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full" />
               </Link>
             ))}
+            <LanguageSwitcher />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="icon"
@@ -106,12 +111,12 @@ export function Navbar() {
           >
             {navItems.map((item) => (
               <Link
-                key={item.name}
+                key={item.key}
                 href={item.href}
                 className="block px-3 py-2 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-accent rounded-md transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {item.name}
+                {t(`nav.${item.key}`)}
               </Link>
             ))}
           </motion.div>

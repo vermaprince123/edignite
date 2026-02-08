@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { BookOpen, Palette, PartyPopper, Backpack, Laptop, HeartHandshake } from "lucide-react";
 import { programs } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
 
 const programIcons: Record<number, any> = {
   1: BookOpen,
@@ -15,6 +16,7 @@ const programIcons: Record<number, any> = {
 };
 
 export function Programs() {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -47,11 +49,11 @@ export function Programs() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-primary">Programs</span>
+            {t("programs.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Comprehensive programs designed to nurture creativity, build skills, and empower children for a brighter future.
+            {t("programs.subtitle")}
           </p>
         </motion.div>
 
@@ -64,6 +66,11 @@ export function Programs() {
         >
           {programs.map((program) => {
             const Icon = programIcons[program.id] || BookOpen;
+            const programKey = program.id === 1 ? "mentorship" : 
+                              program.id === 2 ? "creativeArts" :
+                              program.id === 3 ? "onlineMentorship" :
+                              program.id === 4 ? "events" :
+                              program.id === 5 ? "admissions" : "distribution";
             return (
               <motion.div key={program.id} variants={itemVariants}>
                 <Card className="h-full border hover:border-primary/50 transition-all duration-300 hover:shadow-xl group">
@@ -72,15 +79,15 @@ export function Programs() {
                       <Icon className="h-8 w-8 text-primary" />
                     </div>
                     <CardTitle className="text-xl mb-2 group-hover:text-primary transition-colors">
-                      {program.title}
+                      {t(`programs.${programKey}.title`)}
                     </CardTitle>
                     <p className="text-sm font-semibold text-primary">
-                      {program.stats}
+                      {t(`programs.${programKey}.stats`)}
                     </p>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground leading-relaxed text-sm">
-                      {program.description}
+                      {t(`programs.${programKey}.description`)}
                     </p>
                   </CardContent>
                 </Card>

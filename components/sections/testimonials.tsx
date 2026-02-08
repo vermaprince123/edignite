@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Quote, User } from "lucide-react";
 import { testimonials } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
 
 export function Testimonials() {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -38,11 +40,11 @@ export function Testimonials() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            What People <span className="text-primary">Say</span>
+            {t("testimonials.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Hear from parents, volunteers, and beneficiaries about their experiences with Edignite.
+            {t("testimonials.subtitle")}
           </p>
         </motion.div>
 

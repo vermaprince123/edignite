@@ -472,7 +472,7 @@ export const members = [
     id: 1,
     name: "Prince",
     role: "Founder",
-    description: "Software Lead at OneAssist",
+    description: "Software Developer at OneAssist",
     image: "/gallery/prince.png",
     email: "princevermasrcc@gmail.com",
     linkedin: "https://www.linkedin.com/in/prince-verma-edignite/",

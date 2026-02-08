@@ -5,49 +5,51 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
-// Selected best images from gallery for hero banner
-const heroImages = [
-  {
-    id: 1,
-    src: "/gallery/education-1.png",
-    alt: "Children learning at Edignite",
-    title: "Education & Learning",
-    description: "Empowering children through quality education",
-  },
-  {
-    id: 2,
-    src: "/gallery/events-1.png",
-    alt: "Student Day Celebration",
-    title: "Celebrating Achievements",
-    description: "Student Day Celebration on the eve of Dr. APJ Abdul Kalam's birthday",
-  },
-  {
-    id: 3,
-    src: "/gallery/ach-1.png",
-    alt: "Student Achievements",
-    title: "Student Success",
-    description: "Celebrating our students' achievements and milestones",
-  },
-  {
-    id: 4,
-    src: "/gallery/dist-1.png",
-    alt: "Distribution Drive",
-    title: "Community Support",
-    description: "Helping children with their daily needs through distribution drives",
-  },
-  {
-    id: 5,
-    src: "/gallery/education-5.png",
-    alt: "Teaching at Umra Gam",
-    title: "Reaching Communities",
-    description: "Bringing education to every child, everywhere",
-  },
-];
+import { useLanguage } from "@/lib/language-context";
 
 export function HeroBanner() {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [direction, setDirection] = React.useState(0);
+
+  // Selected best images from gallery for hero banner
+  const heroImages = [
+    {
+      id: 1,
+      src: "/gallery/education-1.png",
+      alt: "Children learning at Edignite",
+      titleKey: "education",
+      descriptionKey: "educationDesc",
+    },
+    {
+      id: 2,
+      src: "/gallery/events-1.png",
+      alt: "Student Day Celebration",
+      titleKey: "achievements",
+      descriptionKey: "achievementsDesc",
+    },
+    {
+      id: 3,
+      src: "/gallery/ach-1.png",
+      alt: "Student Achievements",
+      titleKey: "success",
+      descriptionKey: "successDesc",
+    },
+    {
+      id: 4,
+      src: "/gallery/dist-1.png",
+      alt: "Distribution Drive",
+      titleKey: "community",
+      descriptionKey: "communityDesc",
+    },
+    {
+      id: 5,
+      src: "/gallery/education-5.png",
+      alt: "Teaching at Umra Gam",
+      titleKey: "reaching",
+      descriptionKey: "reachingDesc",
+    },
+  ];
 
   // Auto-rotate images
   React.useEffect(() => {
@@ -152,10 +154,10 @@ export function HeroBanner() {
               className="max-w-4xl mx-auto"
             >
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-                {heroImages[currentIndex].title}
+                {t(`heroBanner.${heroImages[currentIndex].titleKey}`)}
               </h2>
               <p className="text-xl md:text-2xl text-white/90 mb-8">
-                {heroImages[currentIndex].description}
+                {t(`heroBanner.${heroImages[currentIndex].descriptionKey}`)}
               </p>
             </motion.div>
           </AnimatePresence>

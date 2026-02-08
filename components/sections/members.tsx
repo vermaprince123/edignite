@@ -5,8 +5,10 @@ import { Users, Mail, Linkedin, Instagram } from "lucide-react";
 import { members } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
+import { useLanguage } from "@/lib/language-context";
 
 export function Members() {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -43,13 +45,12 @@ export function Members() {
               <Users className="h-8 w-8 text-primary" />
             </div>
             <h2 className="text-4xl md:text-5xl font-bold">
-              Our <span className="text-primary">Team</span>
+              {t("members.title")}
             </h2>
           </div>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Meet the dedicated members of Edignite who are working tirelessly to
-            make a difference in children's lives through education and empowerment.
+            {t("members.subtitle")}
           </p>
         </motion.div>
 

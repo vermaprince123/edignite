@@ -4,8 +4,10 @@ import { motion } from "framer-motion";
 import { Target, Eye, Users, Calendar, GraduationCap } from "lucide-react";
 import { ngoInfo } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLanguage } from "@/lib/language-context";
 
 export function About() {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -30,23 +32,23 @@ export function About() {
   const values = [
     {
       icon: Target,
-      title: "Our Mission",
-      description: ngoInfo.mission,
+      titleKey: "mission",
+      descriptionKey: "missionText",
     },
     {
       icon: Eye,
-      title: "Our Vision",
-      description: ngoInfo.vision,
+      titleKey: "vision",
+      descriptionKey: "visionText",
     },
     {
       icon: Users,
-      title: "Our Values",
-      description: "Compassion, Innovation, Integrity, and Empowerment guide everything we do.",
+      titleKey: "values",
+      descriptionKey: "valuesText",
     },
     {
       icon: Calendar,
-      title: "Established",
-      description: `Founded in ${ngoInfo.founded}, we've been dedicated to transforming children's lives through education and holistic development.`,
+      titleKey: "established",
+      descriptionKey: "establishedText",
     },
   ];
 
@@ -61,11 +63,11 @@ export function About() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            About <span className="text-primary">Us</span>
+            {t("about.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            A non-profit organization dedicated to educating underprivileged children and achieving Dr. APJ Abdul Kalam's vision of an 'Educated India'.
+            {t("about.description")}
           </p>
         </motion.div>
 
@@ -79,15 +81,15 @@ export function About() {
           {values.map((value) => {
             const Icon = value.icon;
             return (
-              <motion.div key={value.title} variants={itemVariants}>
+              <motion.div key={value.titleKey} variants={itemVariants}>
                 <Card className="h-full border hover:border-primary/50 transition-all duration-300 hover:shadow-lg">
                   <CardContent className="p-8">
                     <div className="w-14 h-14 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                       <Icon className="h-7 w-7 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">{value.title}</h3>
+                    <h3 className="text-2xl font-bold mb-4">{t(`about.${value.titleKey}`)}</h3>
                     <p className="text-muted-foreground leading-relaxed">
-                      {value.description}
+                      {t(`about.${value.descriptionKey}`)}
                     </p>
                   </CardContent>
                 </Card>
@@ -110,29 +112,26 @@ export function About() {
                 <div className="w-16 h-16 rounded-lg bg-primary/10 flex items-center justify-center">
                   <GraduationCap className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-3xl font-bold">Our Story</h3>
+                <h3 className="text-3xl font-bold">{t("about.story")}</h3>
               </div>
               <div className="space-y-5 text-muted-foreground leading-relaxed">
                 <p className="text-base">
-                  Edignite Educational and Charitable Trust was founded in {ngoInfo.founded} with a powerful mission: <strong className="text-foreground">"Igniting Lives through Education"</strong> and achieving Dr. APJ Abdul Kalam's vision of an <strong className="text-foreground">"Educated India"</strong>. We are a non-profit trust primarily focusing on mentoring and educating underprivileged children, especially those from slum areas.
+                  {t("about.storyText")}
                 </p>
                 <p className="text-base">
-                  Our work extends beyond education—we also fulfill many needs of the poor, ensuring that children have access to not just learning, but also to opportunities that help them grow, dream, and achieve. Through programs in drawing, drama, science, teaching, technical skills, and sports, we provide holistic development to students.
+                  {t("about.storyText2")}
                 </p>
                 <p className="text-base">
-                  We believe in the power of community. Through our innovative WhatsApp groups, we connect passionate volunteers with children who need support. Whether it's celebrating birthdays, sharing unique skills, or providing mentorship, our volunteers play a crucial role in shaping young minds.
+                  {t("about.storyText3")}
                 </p>
                 <div className="bg-primary/5 p-6 rounded-lg border-l-4 border-primary mt-8">
                   <p className="font-semibold text-foreground text-lg mb-3">
-                    Walking on of of the most powerful quotes of Dr. APJ Abdul Kalam
+                    {t("about.kalamQuoteLabel")}
                   </p>
                   <p className="italic text-foreground text-base leading-relaxed">
-                    "{ngoInfo.kalamQuote}"
+                    &quot;{t("about.kalamQuote")}&quot;
                   </p>
                 </div>
-                <p className="font-semibold text-foreground pt-4 text-base">
-                  Together, we're contributing our part to society and building hope for others. Every child deserves quality education, and we're here to make that happen.
-                </p>
               </div>
             </CardContent>
           </Card>

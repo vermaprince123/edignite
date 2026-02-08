@@ -6,8 +6,10 @@ import { ArrowRight, Images } from "lucide-react";
 import { galleryImages, galleryCategories } from "@/lib/data";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/language-context";
 
 export function Gallery() {
+  const { t } = useLanguage();
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -63,11 +65,11 @@ export function Gallery() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Our <span className="text-primary">Gallery</span>
+            {t("gallery.title")}
           </h2>
           <div className="w-24 h-1 bg-primary mx-auto rounded-full mb-6" />
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Capturing moments of joy, learning, and creativity from our programs and events.
+            {t("gallery.subtitle")}
           </p>
         </motion.div>
 
@@ -140,7 +142,7 @@ export function Gallery() {
             asChild
           >
             <Link href="/gallery" className="group">
-              View All Photos
+              {t("gallery.viewAll")}
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </Button>
