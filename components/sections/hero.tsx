@@ -829,7 +829,7 @@ export function Hero() {
               >
                 <Star className="h-5 w-5 text-pink-600 dark:text-pink-400" />
               </motion.div>
-              <span className="text-sm font-semibold text-pink-700 dark:text-pink-300">{t("hero.since")} {ngoInfo.founded}</span>
+              <span className="text-sm font-semibold text-pink-700 dark:text-pink-300">{t("hero.since")}</span>
             </motion.div>
           </motion.div>
 

@@ -17,7 +17,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: "✨ Edignite Educational and Charitable Trust ✨",
+      badge: "Edignite Educational and Charitable Trust",
       badgeShort: "✨ Edignite Trust ✨",
       title1: "Empowering Lives",
       title2: "through Education",
@@ -26,8 +26,21 @@ export const translations = {
       educationMentorship: "Education & Mentorship",
       childrenCount: "500+ Children",
       since: "Since 2019",
-      becomeVolunteer: "🎓 Become a Volunteer",
-      getInTouch: "💬 Get In Touch",
+      becomeVolunteer: "Become a Volunteer",
+      getInTouch: "Get In Touch",
+    },
+    // Hero Banner
+    heroBanner: {
+      education: "Teaching and Mentorship",
+      educationDesc: "Empowering children by providing them quality education",
+      achievements: "Learning through celebrations",
+      achievementsDesc: "Learning by celebrating events like Dr. APJ Abdul Kalam's birthday (Student's Day), Independence Day, Republic Day, etc.",
+      success: "Student's success",
+      successDesc: "Our children shining out in several fields",
+      community: "Community Service",
+      communityDesc: "Giving back to the community through several distribution drives",
+      reaching: "Community Reach",
+      reachingDesc: "Aim to make education accessible to every child in every corner",
     },
     // About Section
     about: {
@@ -185,8 +198,8 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      badge: "✨ એડિગ્નાઇટ શૈક્ષણિક અને ચારિત્ર્ય ટ્રસ્ટ ✨",
-      badgeShort: "✨ એડિગ્નાઇટ ટ્રસ્ટ ✨",
+      badge: "એડિગ્નાઇટ શૈક્ષણિક અને ચારિત્ર્ય ટ્રસ્ટ",
+      badgeShort: "એડિગ્નાઇટ ટ્રસ્ટ",
       title1: "જીવનને સશક્ત બનાવવું",
       title2: "શિક્ષણ દ્વારા",
       tagline: "અન્યો માટે આશા",
@@ -194,8 +207,8 @@ export const translations = {
       educationMentorship: "શિક્ષણ અને માર્ગદર્શન",
       childrenCount: "500+ બાળકો",
       since: "2019 થી",
-      becomeVolunteer: "🎓 સ્વયંસેવક બનો",
-      getInTouch: "💬 સંપર્ક કરો",
+      becomeVolunteer: "સ્વયંસેવક બનો",
+      getInTouch: "સંપર્ક કરો",
     },
     // About Section
     about: {
