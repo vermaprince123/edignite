@@ -13,10 +13,10 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-gradient-to-br from-blue-50 via-purple-50 via-pink-50 to-orange-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:via-pink-950/20 dark:to-orange-950/20"
+      className="min-h-screen flex items-center justify-center relative isolate overflow-hidden pt-20 bg-gradient-to-br from-blue-50 via-purple-50 via-pink-50 to-orange-50 dark:from-blue-950/20 dark:via-purple-950/20 dark:via-pink-950/20 dark:to-orange-950/20"
     >
       {/* Vibrant animated background elements */}
-      <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         {/* Colorful gradient orbs */}
         <motion.div
           className="absolute top-20 left-10 w-72 h-72 bg-blue-400/30 rounded-full blur-3xl"

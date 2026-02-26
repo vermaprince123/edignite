@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import { ngoInfo } from "@/lib/data";
 import { useLanguage } from "@/lib/language-context";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const navItems = [
   { key: "home", href: "/" },
@@ -82,11 +83,13 @@ export function Navbar() {
               </Link>
             ))}
             <LanguageSwitcher />
+            <ThemeToggle />
           </div>
 
           {/* Mobile Menu Button */}
           <div className="flex md:hidden items-center space-x-2">
             <LanguageSwitcher />
+            <ThemeToggle />
             <Button
               variant="ghost"
               size="icon"
