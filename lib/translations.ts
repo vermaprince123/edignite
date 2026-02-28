@@ -13,6 +13,7 @@ export const translations = {
       impact: "Impact",
       gallery: "Gallery",
       members: "Members",
+      blog: "Blog",
       contact: "Contact",
     },
     // Hero Section
@@ -147,6 +148,15 @@ export const translations = {
       orJoin: "Or join our WhatsApp group:",
       clickHere: "Click here to join",
     },
+    // Blog
+    blog: {
+      badge: "Stories & Updates",
+      title: "Our Stories",
+      subtitle: "Read inspiring stories, heartfelt moments, and emotional journeys from our mission of empowering children through education. Connect with the lives we touch and the dreams we ignite.",
+      readMore: "Read More",
+      viewAll: "View All Stories",
+      backToBlog: "Back to Blog",
+    },
     // Contact
     contact: {
       title: "Get In Touch",
@@ -194,6 +204,7 @@ export const translations = {
       impact: "પ્રભાવ",
       gallery: "ગેલેરી",
       members: "સભ્યો",
+      blog: "બ્લોગ",
       contact: "સંપર્ક કરો",
     },
     // Hero Section
@@ -314,6 +325,15 @@ export const translations = {
       submit: "અરજી સબમિટ કરો",
       orJoin: "અથવા અમારા વોટ્સએપ જૂથમાં જોડાઓ:",
       clickHere: "જોડાવા માટે અહીં ક્લિક કરો",
+    },
+    // Blog
+    blog: {
+      badge: "કહાનીઓ અને અપડેટ્સ",
+      title: "અમારી કહાનીઓ",
+      subtitle: "શિક્ષણ દ્વારા બાળકોને સશક્ત બનાવવાના અમારા મિશનમાંથી પ્રેરણાદાયક કહાનીઓ, હૃદયસ્પર્શી ક્ષણો અને ભાવનાત્મક યાત્રાઓ વાંચો. અમે સ્પર્શ કરીએ છીએ તે જીવનો અને અમે જાગૃત કરીએ છીએ તે સ્વપ્નો સાથે જોડાઓ.",
+      readMore: "વધુ વાંચો",
+      viewAll: "બધી કહાનીઓ જુઓ",
+      backToBlog: "બ્લોગ પર પાછા જાઓ",
     },
     // Contact
     contact: {

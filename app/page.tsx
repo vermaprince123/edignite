@@ -20,14 +20,14 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
-        <HeroBanner />
+        {/* <HeroBanner /> */}
         <About />
         <Programs />
         <Impact />
         <Testimonials />
         <Gallery />
         {/* <Events />  */} {/* TODO: Uncomment after dynamic implementation of events section */}
-        {/* <Blog /> */}  {/* TODO: Uncomment after update of blogs section */}
+        <Blog />
         <Volunteer />
         <Contact />
       </main>

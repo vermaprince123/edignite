@@ -20,7 +20,7 @@ const navItems = [
   { key: "gallery", href: "/gallery" },
   { key: "members", href: "/members" },
   // { key: "events", href: "/events" },
-  // { key: "blog", href: "/blog" },
+  { key: "blog", href: "/blog" },
   { key: "contact", href: "/contact" },
 ];
 

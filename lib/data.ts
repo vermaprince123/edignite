@@ -443,27 +443,51 @@ export const galleryImages = [
 export const blogPosts = [
   {
     id: 1,
-    title: "Achieving Dr. Kalam's Dream: Educated India",
+    title: "Little Anshu's Big Dream: From Slum to Success",
     excerpt:
-      "Inspired by Dr. APJ Abdul Kalam's vision of an 'Educated India', Edignite is committed to providing quality education to every child, regardless of their background.",
-    date: "2024-03-01",
-    category: "Mission",
+      "Meet Anshu, a bright 10-year-old who won 3rd rank in drawing and 1st rank in essay writing competitions. Her journey from a small slum area to becoming a confident, creative child shows us that every child has unlimited potential waiting to be unlocked.",
+    date: "2024-12-15",
+    category: "Success Stories",
   },
   {
     id: 2,
-    title: "Connecting Volunteers with Children Through WhatsApp",
+    title: "A Birthday Party That Changed Everything",
     excerpt:
-      "Our innovative WhatsApp groups connect passionate volunteers with children from slum areas, creating opportunities for skill sharing, birthday celebrations, and mentorship.",
-    date: "2024-02-15",
-    category: "Volunteering",
+      "When we organized a birthday celebration for a child who had never had one before, the joy in their eyes was indescribable. This simple act of love reminded us why we do what we do - every child deserves moments of happiness and celebration.",
+    date: "2024-11-20",
+    category: "Heartwarming Moments",
   },
   {
     id: 3,
-    title: "Partnership with SVNIT: Opening Doors to Innovation",
+    title: "The Day We Opened Doors to Innovation at SVNIT",
     excerpt:
-      "Our collaboration with SVNIT has enabled children to experience innovation, discipline, and leadership firsthand, inspiring them to dream bigger and achieve more.",
-    date: "2024-04-18",
-    category: "Partnerships",
+      "Watching our children's faces light up as they explored the NCC exhibition at SVNIT was magical. For many, it was their first time seeing innovation and technology up close. These experiences plant seeds of dreams that will grow into their future aspirations.",
+    date: "2024-10-18",
+    category: "Experiences",
+  },
+  {
+    id: 4,
+    title: "From Tears to Triumph: A Parent's Journey",
+    excerpt:
+      "A mother's heartfelt letter about how Edignite transformed her daughter's life. From struggling with basic education to confidently participating in competitions, this story captures the emotional journey of hope, transformation, and empowerment.",
+    date: "2024-09-10",
+    category: "Parent Stories",
+  },
+  {
+    id: 5,
+    title: "The Magic of Mentorship: Building Tomorrow's Leaders",
+    excerpt:
+      "Our volunteer mentors don't just teach - they inspire, encourage, and believe in every child. Discover how one-on-one mentorship is creating confident, ambitious young minds who are ready to change the world, one step at a time.",
+    date: "2024-08-25",
+    category: "Mentorship",
+  },
+  {
+    id: 6,
+    title: "Winter Warmth: More Than Just Sweaters",
+    excerpt:
+      "During our winter distribution drive, we didn't just give sweaters - we gave warmth, care, and the message that someone cares. The smiles and gratitude we received reminded us that small acts of kindness create lasting memories in children's hearts.",
+    date: "2024-12-20",
+    category: "Community Care",
   },
 ];
 
