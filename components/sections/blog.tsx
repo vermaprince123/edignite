@@ -339,39 +339,27 @@ export function Blog() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-center"
         >
-          <motion.div
-            animate={{
-              y: [0, -8, 0],
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            whileHover={{ scale: 1.05, y: -5 }}
+          <Button
+            size="lg"
+            asChild
+            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all px-8 py-6 text-lg font-bold border-0 hover:scale-105"
           >
-            <Button
-              size="lg"
-              asChild
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white shadow-xl hover:shadow-2xl transition-all px-8 py-6 text-lg font-bold border-0"
-            >
-              <Link href="/blog" className="flex items-center gap-2">
-                <motion.span
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                >
-                  📖
-                </motion.span>
-                {t("blog.viewAll")}
-                <motion.div
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  <ArrowRight className="h-5 w-5" />
-                </motion.div>
-              </Link>
-            </Button>
-          </motion.div>
+            <Link href="/blog" className="flex items-center gap-2">
+              <motion.span
+                animate={{ rotate: [0, 15, -15, 0] }}
+                transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+              >
+                📖
+              </motion.span>
+              {t("blog.viewAll")}
+              <motion.div
+                animate={{ x: [0, 5, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity }}
+              >
+                <ArrowRight className="h-5 w-5" />
+              </motion.div>
+            </Link>
+          </Button>
         </motion.div>
       </div>
     </section>
