@@ -14,6 +14,18 @@ const themes = [
 
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+
+  // Avoid hydration mismatch by only showing active state after mount
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  // During SSR, don't show active state to avoid hydration mismatch
+  const getIsActive = (themeOptionValue: string) => {
+    if (!mounted) return false;
+    return theme === themeOptionValue;
+  };
 
   return (
     <div
@@ -23,7 +35,7 @@ export function ThemeToggle() {
     >
       {themes.map((themeOption) => {
         const Icon = themeOption.icon;
-        const isActive = theme === themeOption.value;
+        const isActive = getIsActive(themeOption.value);
 
         return (
           <Button

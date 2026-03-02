@@ -553,3 +553,27 @@ export const members = [
     instagram: "amanvataliya@gmail.com",
   },
 ];
+
+// YouTube Videos Data
+export interface YouTubeVideo {
+  id: number;
+  title: string;
+  description: string;
+  videoId: string;
+  thumbnail?: string;
+  category: string;
+  date: string;
+  duration?: string;
+}
+
+export const youtubeVideos: YouTubeVideo[] = [
+  {
+    id: 1,
+    title: "Edignite - Igniting Lives through Education",
+    description: "Watch our journey of providing free education to underprivileged children and making a difference in their lives.",
+    videoId: "ROgtqcBgkHk",
+    category: "education",
+    date: "2024",
+  },
+  // Add more videos here as needed
+];

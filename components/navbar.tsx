@@ -18,6 +18,7 @@ const navItems = [
   { key: "programs", href: "/programs" },
   { key: "impact", href: "/impact" },
   { key: "gallery", href: "/gallery" },
+  { key: "videos", href: "/videos" },
   { key: "members", href: "/members" },
   // { key: "events", href: "/events" },
   { key: "blog", href: "/blog" },
