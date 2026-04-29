@@ -10,6 +10,7 @@ import { Impact } from "@/components/sections/impact";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Gallery } from "@/components/sections/gallery";
 import { Events } from "@/components/sections/events";
+import { EventBanner } from "@/components/sections/event-banner";
 import { Blog } from "@/components/sections/blog";
 import { Volunteer } from "@/components/sections/volunteer";
 import { Contact } from "@/components/sections/contact";
@@ -21,6 +22,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         {/* <HeroBanner /> */}
+        <EventBanner />
         <About />
         <Programs />
         <Impact />
