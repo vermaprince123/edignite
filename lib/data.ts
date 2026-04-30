@@ -23,60 +23,6 @@ export const ngoInfo = {
 export const programs = [
   {
     id: 1,
-    programKey: "mentorship",
-    title: "Mentorship and Education",
-    description:
-      "Providing free mentorship and assisting underprivileged kids in their education, making them self-dependent, empowered professionals of future.",
-    color: "from-blue-500 to-cyan-500",
-    stats: "500+ Children mentored",
-  },
-  {
-    id: 2,
-    programKey: "creativeArts",
-    title: "Creative Arts",
-    description:
-      "Encouraging young artists in the srtudents and making them participate in numerous art, music and dance events.",
-    color: "from-pink-500 to-rose-500",
-    stats: "5+ Competitions round the year",
-  },
-  {
-    id: 3,
-    programKey: "onlineMentorship",
-    title: "Online Mentorship",
-    description:
-      "Shaping the future of students by connecting them with industry experts through online mentorship programme",
-    color: "from-orange-500 to-yellow-500",
-    stats: "60+ sessions conducted",
-  },
-  {
-    id: 4,
-    programKey: "events",
-    title: "Events and Celebrations",
-    description:
-      "Imparting the values of curiosity, helpfulness, determination, etc. through numerous celebrations, events and festivals",
-    color: "from-teal-500 to-blue-500",
-    stats: "20+ events celebrated round the year",
-  },
-  {
-    id: 5,
-    programKey: "admissions",
-    title: "School Admissions",
-    description:
-      "Enrolling underprivileged and unschooled kids to formal education, and thus helping them build a secured future",
-    color: "from-teal-500 to-blue-500",
-    stats: "10+ kids enrolled till now.",
-  },
-  {
-    id: 6,
-    programKey: "distribution",
-    title: "Distribution Drives",
-    description:
-      "Helping kids with their daily needs through distribution drives of various stationery items, clothes, footwear, water bottles, etc",
-    color: "from-teal-500 to-blue-500",
-    stats: "30+ distribution drives conducted till now.",
-  },
-  {
-    id: 7,
     programKey: "aiSession",
     title: "AI Transition Webinar",
     description:
@@ -89,6 +35,60 @@ export const programs = [
       name: "Campus X",
       logo: "/gallery/sponser.jpeg",
     },
+  },
+  {
+    id: 2,
+    programKey: "mentorship",
+    title: "Mentorship and Education",
+    description:
+      "Providing free mentorship and assisting underprivileged kids in their education, making them self-dependent, empowered professionals of future.",
+    color: "from-blue-500 to-cyan-500",
+    stats: "500+ Children mentored",
+  },
+  {
+    id: 3,
+    programKey: "creativeArts",
+    title: "Creative Arts",
+    description:
+      "Encouraging young artists in the srtudents and making them participate in numerous art, music and dance events.",
+    color: "from-pink-500 to-rose-500",
+    stats: "5+ Competitions round the year",
+  },
+  {
+    id: 4,
+    programKey: "onlineMentorship",
+    title: "Online Mentorship",
+    description:
+      "Shaping the future of students by connecting them with industry experts through online mentorship programme",
+    color: "from-orange-500 to-yellow-500",
+    stats: "60+ sessions conducted",
+  },
+  {
+    id: 5,
+    programKey: "events",
+    title: "Events and Celebrations",
+    description:
+      "Imparting the values of curiosity, helpfulness, determination, etc. through numerous celebrations, events and festivals",
+    color: "from-teal-500 to-blue-500",
+    stats: "20+ events celebrated round the year",
+  },
+  {
+    id: 6,
+    programKey: "admissions",
+    title: "School Admissions",
+    description:
+      "Enrolling underprivileged and unschooled kids to formal education, and thus helping them build a secured future",
+    color: "from-teal-500 to-blue-500",
+    stats: "10+ kids enrolled till now.",
+  },
+  {
+    id: 7,
+    programKey: "distribution",
+    title: "Distribution Drives",
+    description:
+      "Helping kids with their daily needs through distribution drives of various stationery items, clothes, footwear, water bottles, etc",
+    color: "from-teal-500 to-blue-500",
+    stats: "30+ distribution drives conducted till now.",
   },
 ];
 
