@@ -23,6 +23,7 @@ export const ngoInfo = {
 export const programs = [
   {
     id: 1,
+    programKey: "mentorship",
     title: "Mentorship and Education",
     description:
       "Providing free mentorship and assisting underprivileged kids in their education, making them self-dependent, empowered professionals of future.",
@@ -31,6 +32,7 @@ export const programs = [
   },
   {
     id: 2,
+    programKey: "creativeArts",
     title: "Creative Arts",
     description:
       "Encouraging young artists in the srtudents and making them participate in numerous art, music and dance events.",
@@ -39,6 +41,7 @@ export const programs = [
   },
   {
     id: 3,
+    programKey: "onlineMentorship",
     title: "Online Mentorship",
     description:
       "Shaping the future of students by connecting them with industry experts through online mentorship programme",
@@ -47,6 +50,7 @@ export const programs = [
   },
   {
     id: 4,
+    programKey: "events",
     title: "Events and Celebrations",
     description:
       "Imparting the values of curiosity, helpfulness, determination, etc. through numerous celebrations, events and festivals",
@@ -55,6 +59,7 @@ export const programs = [
   },
   {
     id: 5,
+    programKey: "admissions",
     title: "School Admissions",
     description:
       "Enrolling underprivileged and unschooled kids to formal education, and thus helping them build a secured future",
@@ -63,11 +68,27 @@ export const programs = [
   },
   {
     id: 6,
+    programKey: "distribution",
     title: "Distribution Drives",
     description:
       "Helping kids with their daily needs through distribution drives of various stationery items, clothes, footwear, water bottles, etc",
     color: "from-teal-500 to-blue-500",
     stats: "30+ distribution drives conducted till now.",
+  },
+  {
+    id: 7,
+    programKey: "aiSession",
+    title: "AI Transition Webinar",
+    description:
+      "A collaborative visionary session on the AI Transition in Industry — featuring IIT alumni, industry directors, and life coaches. Key topics: AI Impact on Jobs, Future Skills, AI & Climate Change, Career Guidance Q&A.",
+    color: "from-purple-500 to-indigo-500",
+    stats: "10 May 2026 | 9:30 AM | Online",
+    image: "/gallery/ai-session.jpeg",
+    pdf: "/Prize_Details_Rules.pdf",
+    sponsor: {
+      name: "Campus X",
+      logo: "/gallery/sponser.jpeg",
+    },
   },
 ];
 
@@ -242,7 +263,8 @@ export const galleryImages = [
     id: 10,
     category: "events",
     title: "Student Day Celebration",
-    description: "Student Day Celebration on the eve of Dr. APJ Abdul Kalam's birthday",
+    description:
+      "Student Day Celebration on the eve of Dr. APJ Abdul Kalam's birthday",
     image: "/gallery/events-1.png",
     date: "2024",
   },
@@ -250,7 +272,8 @@ export const galleryImages = [
     id: 11,
     category: "events",
     title: "Student Day Celebration",
-    description: "Student Day Celebration on the eve of Dr. APJ Abdul Kalam's birthday",
+    description:
+      "Student Day Celebration on the eve of Dr. APJ Abdul Kalam's birthday",
     image: "/gallery/events-2.png",
     date: "2024",
   },
@@ -298,7 +321,8 @@ export const galleryImages = [
     id: 17,
     category: "events",
     title: "Makarsankranti Celebration",
-    description: "Children celebrating Makarsankranti with balloons and kites at Floral Garden",
+    description:
+      "Children celebrating Makarsankranti with balloons and kites at Floral Garden",
     image: "/gallery/events-8.png",
     date: "2024",
   },
@@ -306,7 +330,8 @@ export const galleryImages = [
     id: 18,
     category: "events",
     title: "Self Defence Camp",
-    description: "Female Students participating in Self Defence Camp organized in Surat",
+    description:
+      "Female Students participating in Self Defence Camp organized in Surat",
     image: "/gallery/events-9.png",
     date: "2024",
   },
@@ -330,7 +355,8 @@ export const galleryImages = [
     id: 21,
     category: "events",
     title: "Birthday Celebrations",
-    description: "Visit of children to restaurant during birthdays and celebrations",
+    description:
+      "Visit of children to restaurant during birthdays and celebrations",
     image: "/gallery/events-12.png",
     date: "2024",
   },
@@ -346,7 +372,8 @@ export const galleryImages = [
     id: 23,
     category: "achievements",
     title: "Anshu's achievement in drawing and essay writing competition",
-    description: "Anshu's 3rd rank and overall 1st rank in drawing and essay competition respectively",
+    description:
+      "Anshu's 3rd rank and overall 1st rank in drawing and essay competition respectively",
     image: "/gallery/ach-1.png",
     date: "2024",
   },
@@ -354,7 +381,8 @@ export const galleryImages = [
     id: 24,
     category: "achievements",
     title: "District level achievement of kids in a Sports Competition",
-    description: "The team that included two of Edignite student's won a district level frisbee competition",
+    description:
+      "The team that included two of Edignite student's won a district level frisbee competition",
     image: "/gallery/ach-2.png",
     date: "2024",
   },
@@ -410,7 +438,8 @@ export const galleryImages = [
     id: 31,
     category: "distribution",
     title: "Donation Plate",
-    description: "Donation Plate kept at a hostel canteen in SVNIT, where students can contribute a spoon/part of the meal from their plate to fill stomach of one child",
+    description:
+      "Donation Plate kept at a hostel canteen in SVNIT, where students can contribute a spoon/part of the meal from their plate to fill stomach of one child",
     image: "/gallery/dist-7.png",
     date: "2024",
   },
@@ -426,7 +455,8 @@ export const galleryImages = [
     id: 33,
     category: "distribution",
     title: "Contribution Box",
-    description: "Contibution box kept at one of the hostels, where people can donate items of daily use (eg: clothes) to kids - to be taken during our regular distribution drives",
+    description:
+      "Contibution box kept at one of the hostels, where people can donate items of daily use (eg: clothes) to kids - to be taken during our regular distribution drives",
     image: "/gallery/dist-9.png",
     date: "2024",
   },
@@ -434,7 +464,8 @@ export const galleryImages = [
     id: 34,
     category: "meetups",
     title: "Volunteer Meet Up",
-    description: "Volunteer meet up for recreation and to discuss progress and development of organization",
+    description:
+      "Volunteer meet up for recreation and to discuss progress and development of organization",
     image: "/gallery/meetup-1.png",
     date: "2024",
   },
@@ -492,7 +523,7 @@ export const blogPosts = [
 ];
 
 export const members = [
-   {
+  {
     id: 1,
     name: "Prince",
     role: "Founder",
@@ -512,7 +543,7 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/heer-mehta-edignite/",
     instagram: "",
   },
-    {
+  {
     id: 3,
     name: "Harsh",
     role: "Volunteer Coordinator",
@@ -570,7 +601,8 @@ export const youtubeVideos: YouTubeVideo[] = [
   {
     id: 1,
     title: "Edignite - Igniting Lives through Education",
-    description: "Watch our journey of providing free education to underprivileged children and making a difference in their lives.",
+    description:
+      "Watch our journey of providing free education to underprivileged children and making a difference in their lives.",
     videoId: "ROgtqcBgkHk",
     category: "education",
     date: "2024",

@@ -98,6 +98,11 @@ export const translations = {
         description: "Helping kids with their daily needs through distribution drives of various stationery items, clothes, footwear, water bottles, etc",
         stats: "30+ distribution drives conducted till now.",
       },
+      aiSession: {
+        title: "AI Transition Webinar",
+        description: "A collaborative visionary session on the AI Transition in Industry — featuring IIT alumni, industry directors, and life coaches. Topics: AI Impact on Jobs, Future Skills, AI & Climate Change, Career Guidance Q&A.",
+        stats: "10 May 2026 | 9:30 AM | Online",
+      },
     },
     // Impact Section
     impact: {
@@ -276,6 +281,11 @@ export const translations = {
         title: "વિતરણ ડ્રાઇવ્સ",
         description: "વિવિધ સ્ટેશનરી વસ્તુઓ, કપડાં, પગરખાં, પાણીની બોટલો વગેરેના વિતરણ ડ્રાઇવ્સ દ્વારા બાળકોની દૈનિક જરૂરિયાતોમાં મદદ કરવી",
         stats: "હવે સુધી 30+ વિતરણ ડ્રાઇવ્સ આયોજિત કરાયા.",
+      },
+      aiSession: {
+        title: "AI સંક્રમણ વેબિનાર",
+        description: "ઉદ્યોગમાં AI સંક્રમણ પર એક સહયોગી દ્રષ્ટિ સત્ર — IIT ભૂતપૂર્વ, ઉદ્યોગ નિર્દેશકો અને જીવન કોચ સહ. વિષયો: નોકરીઓ પર AI ની અસર, ભવિષ્ય કૌશલ્ય, AI અને આબોહવા, કારકિર્દી Q&A.",
+        stats: "10 મે 2026 | સવારે 9:30 | ઓનલાઇન",
       },
     },
     // Impact Section
