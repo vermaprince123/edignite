@@ -583,6 +583,16 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/aman-vataliya/",
     instagram: "amanvataliya@gmail.com",
   },
+  {
+    id: 7,
+    name: "Vidhan Gauswami",
+    role: "Volunteer Coordinator",
+    description: "Electrical Engineer (B.Tech.), NIT Surat",
+    image: "/gallery/vidhan-gauswami.jpeg",
+    email: "vidhan.gauswami@gmail.com",
+    linkedin: "https://www.linkedin.com/in/vidhan-gauswami-145a94256/",
+    instagram: "",
+  },
 ];
 
 // YouTube Videos Data
