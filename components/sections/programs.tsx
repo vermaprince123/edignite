@@ -15,6 +15,7 @@ import {
   ZoomIn,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { programs } from "@/lib/data";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/lib/language-context";
@@ -149,6 +150,16 @@ export function Programs() {
                           <Download className="h-4 w-4" />
                           Prize Details &amp; Rules
                         </a>
+                      )}
+
+                      {key === "aiSession" && (
+                        <Link
+                          href="/programs/ai-webinar-quiz"
+                          className="inline-flex items-center gap-2 text-sm font-medium bg-primary text-primary-foreground rounded-lg px-4 py-2 hover:opacity-90 transition-all duration-200 w-fit"
+                        >
+                          <Brain className="h-4 w-4" />
+                          Take Pre-Assessment Quiz
+                        </Link>
                       )}
                     </CardContent>
                   </Card>
